@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
@@ -61,13 +61,14 @@
             <h5 class="card-header">LOGIN</h5>
             <div class="card-body">
                 
-                <div class="form-group">
+                <div class="form-group" id='databox'>
                     <label for="number">Mobile Number</label>
                     <input type="mobile" class="form-control" id="number" aria-describedby="mnohelp" placeholder="9XXXXXXXX1" maxlength="10">
                     <small id="mnohelp" class="form-text text-muted">We'll never share your mobile number with anyone else.</small>
                     <div id="recaptcha-container"></div>
+                    <button type="submit" class="btn btn-primary" onclick="phoneAuth();" id="otpbutton" disabled="true">GET OTP</button>
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="phoneAuth();">GET OTP</button>
+                
                 
                 
             </div>
@@ -79,7 +80,6 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-auth.js"></script>
-
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
