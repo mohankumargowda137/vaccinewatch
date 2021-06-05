@@ -10,7 +10,6 @@
 
     <title>Vaccine Watch</title>
     <style>
-      <!-- Bootstrap CSS -->
         nav{
           background: rgb(66,245,190);
           background: linear-gradient(90deg, rgba(66,245,190,1) 55%, rgba(40,204,183,1) 100%);
